@@ -1,12 +1,22 @@
-import { AppBar, Box, Container, IconButton, Toolbar, Typography } from '@mui/material';
-import React from 'react';
+import { AppBar, Box, Container, MenuItem, Menu, Toolbar, Typography, Button } from '@mui/material';
+import React, { useState } from 'react';
 import { icons } from '../Assets/Icons/Index';
-import { Menu } from '@mui/icons-material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
     return (
         <>
-            <AppBar sx={{ bgcolor: '#1A1A1A', height: { xs: '68px', md: '77px', lg: '99px' } }} >
+            <AppBar sx={{ bgcolor: '#1A1A1A', height: { xs: '70px', sm: '77px', lg: '90px' , position:'relative'} }} >
                 <Container maxWidth='xl' sx={{ m: 'auto' }}>
                     <Toolbar sx={{ m: 'auto' }}  >
                         <Box sx={{
@@ -32,7 +42,7 @@ const Navbar = () => {
                             }}>
                             Estatein
                         </Typography>
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' }, placeItems: 'center' }}>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, placeItems: 'center' }}>
                             <Box sx={{
                                 "& img": {
                                     display: { xs: 'block', sm: 'none' },
@@ -55,22 +65,75 @@ const Navbar = () => {
                                 }}>
                                 Estatein
                             </Typography>
-                            <IconButton
-                                size="large"
-                                aria-label="account of current user"
-                                aria-controls="menu-appbar"
+                            <Button
+                                id="demo-positioned-button"
+                                aria-controls={open ? 'demo-positioned-menu' : undefined}
                                 aria-haspopup="true"
-                                // onClick={handleOpenNavMenu}
-                                color="inherit"
-                                sx={{ mr: 0, ml: 'auto' }}
+                                aria-expanded={open ? 'true' : undefined}
+                                onClick={handleClick}
+                                sx={{ ml: 'auto', mr: '0' }}
                             >
-                                <Menu />
-                            </IconButton>
+                                <MenuIcon sx={{color:'white',}} fontSize='large'
+                                />
+                            </Button>
+                            <Menu
+                                id="demo-positioned-menu"
+                                aria-labelledby="demo-positioned-button"
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'left',
+                                }}
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'left',
+                                }}
+                                sx={{ display: { xs: 'block', md: 'none' } }}
+                            >
+                                <MenuItem component={Link} to="/ " onClick={handleClose}>Home</MenuItem>
+                                <MenuItem component={Link} to="/aboutus " onClick={handleClose}>About us</MenuItem>
+                                <MenuItem component={Link} to="/properties " onClick={handleClose}>Properties</MenuItem>
+                                <MenuItem component={Link} to="/services " onClick={handleClose}>Services</MenuItem>
+                                <MenuItem component={Link} to="/contactus " onClick={handleClose}>Contact us</MenuItem>
+                            </Menu>
                         </Box>
+                        <Box sx={{ flexGrow: 1, fontSize: 15, display: { xs: 'none', md: 'flex', alignItems: 'center',justifyContent:'center', margin: 'auto' } }}>
+                            <Button
+                                component={Link} to="/"
+                                sx={{ my: 2, color: 'white', display: 'flex', fontFamily: 'Urbanist' }}
+                            >
+                                Home
+                            </Button>
+                            <Button
+                                component={Link} to="/aboutus"
+                                sx={{ my: 2, color: 'white', display: 'flex', fontFamily: 'Urbanist' }}
+                            >
+                                About us
+                            </Button>
+                            <Button
+                                component={Link} to="/properties"
+                                sx={{ my: 2, color: 'white', display: 'flex', fontFamily: 'Urbanist' }}
+                            >
+                                Properties
+                            </Button>
+                            <Button
+                                component={Link} to="/services"
+                                sx={{ my: 2, color: 'white', display: 'flex', fontFamily: 'Urbanist' }}
+                            >
+                                Services
+                            </Button>
+                        </Box>
+                        <Button
+                            component={Link} to="/contactus"
+                            sx={{ my: 2, color: 'white', display: 'flex', fontFamily: 'Urbanist', display: { xs: 'none', md: 'block' } }}
+                        >
+                            Contact us
+                        </Button>
                     </Toolbar>
-
                 </Container>
-            </AppBar>
+            </AppBar >
         </>
     )
 }

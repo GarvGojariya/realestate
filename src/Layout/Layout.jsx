@@ -4,11 +4,15 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
     return (
-        <div className='relative'>
-            <Navbar />
-            {children}
-            <Footer />
-        </div>
+        <>
+            <div style={{ position: 'relative' }}>
+                <Navbar />
+
+                {children}
+
+                <Footer />
+            </div>
+        </>
     )
 }
 

@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Input, List, ListItemButton, ListItemText, ListSubheader, Typography, makeStyles, } from '@mui/material';
+import { Box, Button, Input, List, ListItemButton, ListItemText, ListSubheader, Typography} from '@mui/material';
 import { React } from 'react'
 import { icons } from '../Assets/Icons/Index';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
@@ -16,7 +16,7 @@ const Footer = () => {
                         <Typography sx={{ color: 'white', fontFamily: 'Urbanist', display: 'flex', alignItems: 'center', fontStyle: 'normal', fontSize: { xs: "25px", md: '35px' }, alignSelf: 'stretch' }}>
                             Start Your Real Estate Journey Today
                         </Typography>
-                        <Typography sx={{ color: 'white', fontFamily: 'Urbanist', fontStyle: 'normal', fontSize: { xs: "14px", sm: '16px' }, fontWeight: '500', alignSelf: 'stretch' }}>
+                        <Typography sx={{ color: '#999', fontFamily: 'Urbanist', fontStyle: 'normal', fontSize: { xs: "14px", sm: '16px' }, fontWeight: '500', alignSelf: 'stretch' }}>
                             Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.
                         </Typography>
                     </Box>
@@ -35,7 +35,7 @@ const Footer = () => {
                                     marginRight: '4px'
                                 }
                             }}>
-                                <img src={icons.Logo} />
+                                <img src={icons.Logo} alt='Logo' />
                             </Box>
                             <Typography
                                 variant="h6"

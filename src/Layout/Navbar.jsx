@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { icons } from '../Assets/Icons/Index';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import '../Styles/Index.css'
 
 const Navbar = () => {
 
@@ -16,8 +17,8 @@ const Navbar = () => {
     };
     return (
         <>
-            <AppBar sx={{ bgcolor: '#1A1A1A', height: { xs: '70px', sm: '77px', lg: '90px' , position:'relative'} }} >
-                <Container maxWidth='xl' sx={{ m: 'auto' }}>
+            <AppBar sx={{bgcolor: '#1A1A1A', height: { xs: '70px', sm: '77px', lg: '90px' , position:'relative'} }} >
+                <Container maxWidth='xl' sx={{mt:'5', m: 'auto' }}>
                     <Toolbar sx={{ m: 'auto' }}  >
                         <Box sx={{
                             "& img": {
@@ -90,13 +91,13 @@ const Navbar = () => {
                                     vertical: 'top',
                                     horizontal: 'left',
                                 }}
-                                sx={{ display: { xs: 'block', md: 'none' } }}
+                                sx={{ display: { xs: 'block', md: 'none' }}}
                             >
-                                <MenuItem component={Link} to="/ " onClick={handleClose}>Home</MenuItem>
-                                <MenuItem component={Link} to="/aboutus " onClick={handleClose}>About us</MenuItem>
-                                <MenuItem component={Link} to="/properties " onClick={handleClose}>Properties</MenuItem>
-                                <MenuItem component={Link} to="/services " onClick={handleClose}>Services</MenuItem>
-                                <MenuItem component={Link} to="/contactus " onClick={handleClose}>Contact us</MenuItem>
+                                <MenuItem component={Link} sx={{color:'white'}} to="/ " onClick={handleClose}>Home</MenuItem>
+                                <MenuItem component={Link} sx={{color:'white'}} to="/aboutus " onClick={handleClose}>About us</MenuItem>
+                                <MenuItem component={Link} sx={{color:'white'}} to="/properties " onClick={handleClose}>Properties</MenuItem>
+                                <MenuItem component={Link} sx={{color:'white'}} to="/services " onClick={handleClose}>Services</MenuItem>
+                                <MenuItem component={Link} sx={{color:'white'}} to="/contactus " onClick={handleClose}>Contact us</MenuItem>
                             </Menu>
                         </Box>
                         <Box sx={{ flexGrow: 1, fontSize: 15, display: { xs: 'none', md: 'flex', alignItems: 'center',justifyContent:'center', margin: 'auto' } }}>
@@ -106,7 +107,7 @@ const Navbar = () => {
                             >
                                 Home
                             </Button>
-                            <Button
+                            <Button 
                                 component={Link} to="/aboutus"
                                 sx={{ my: 2, color: 'white', display: 'flex', fontFamily: 'Urbanist' }}
                             >

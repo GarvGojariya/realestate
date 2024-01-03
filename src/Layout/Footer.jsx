@@ -21,7 +21,7 @@ const Footer = () => {
                         </Typography>
                     </Box>
                     <Box sx={{ width: '25%', placeContent: 'center', display: 'flex' }}>
-                        <Button className='btn-primary' variant='contained' size='small' sx={{ p:'5px',minHeight:'40px',bgcolor: '#703BF7', display: 'flex', placeSelf: 'center', borderRadius: '8px', fontSize: '12px' }}>
+                        <Button className='btn-primary' variant='contained' size='small' sx={{ p:2,minHeight:'40px',bgcolor: '#703BF7', display: 'flex', placeSelf: 'center', borderRadius: '8px', fontSize: '12px' }}>
                             Explore Properties
                         </Button>
                     </Box>
@@ -54,6 +54,7 @@ const Footer = () => {
                         </Box>
                         <Input
                             placeholder="Type in your email"
+                            className='email-input'
                             sx={{ display: 'flex',width:'75%', color: 'white', borderColor: 'gray', borderWidth: '2px', borderRadius: '10px' }}
                         />
                     </Box>

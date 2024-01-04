@@ -4,6 +4,7 @@ import { icons } from '../Assets/Icons/Index';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import '../Styles/Index.css'
+import { images } from '../Assets/Images/Index';
 
 const Navbar = () => {
 
@@ -17,7 +18,7 @@ const Navbar = () => {
     };
     return (
         <>
-            <AppBar sx={{bgcolor: '#1A1A1A', height: { xs: '70px', sm: '77px', lg: '90px' , position:'relative'} }} >
+            <AppBar sx={{bgcolor: '#1A1A1A',backgroundImage:`url(${icons.Group})` ,height: { xs: '70px', sm: '77px', lg: '90px' , position:'relative'} }} >
                 <Container maxWidth='xl' sx={{mt:'5', m: 'auto' }}>
                     <Toolbar sx={{ m: 'auto' }}  >
                         <Box sx={{

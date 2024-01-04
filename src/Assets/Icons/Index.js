@@ -16,8 +16,20 @@ import MailIcon from './MailIcon.svg'
 import LocationIcon from './LocationIcon.svg'
 import SocialIcon from './SocialIcon.svg'
 import Starsg from './Starsg.svg'
+import GraphIcon from './GraphIcon.svg'
+import CutCircleIcon from './CutCircleIcon.svg'
+import CoinIcon from './CoinIcon.svg'
+import NotificationIcon from './NotificationIcon.svg'
+import BriteIcon from './BriteIcon.svg'
+import ShineIcon from './ShineIcon.svg'
+import CardIcon from './CardIcon.svg'
+import MenuIcon from './MenuIcon.svg'
+import FireIcon from './FireIcon.svg'
+import BulbIcon from './BulbIcon.svg'
+import Group from './Group.svg'
+import FooterDesign from './FooterDesign.svg'
 
 export const icons = {
-    CallIcon,SocialIcon,MailIcon,LocationIcon,
+    BriteIcon,Group,FooterDesign,CardIcon,BulbIcon,FireIcon, MenuIcon,ShineIcon,NotificationIcon, CoinIcon, GraphIcon,CutCircleIcon, CallIcon,SocialIcon,MailIcon,LocationIcon,
     Logo,ClientIcon,CommitmentIcon,ExcellenceIcon,TrustIcon,Stars,TwiterLogo,Send,CatagoryIcon,Starsg,HomeIcon,DecisionIcon,ValueIcon,ManagementIcon
 }

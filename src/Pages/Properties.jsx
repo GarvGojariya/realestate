@@ -9,6 +9,10 @@ import PaymentsIcon from '@mui/icons-material/Payments';
 import SizeIcon from '../Assets/Icons/SizeIcon';
 import CalendarTodayRoundedIcon from '@mui/icons-material/CalendarTodayRounded';
 import Stars from '../Assets/Icons/Stars';
+import PropCard from '../Components/PropCard';
+import { images } from '../Assets/Images/Index';
+import MessageForm from '../Components/MessageForm';
+
 
 
 const Properties = () => {
@@ -64,13 +68,46 @@ const Properties = () => {
     '1960 - 1970',
     'Varies',
   ];
-
+  const propertyDetails = [
+    {
+      id: 1,
+      imageSrc: images.Prop1,
+      header: 'Coastal Escapes',
+      name: 'Seaside Serenity Villa',
+      detail: 'Wake up to the soothing melody of waves. This beachfront villa offers... Read More',
+      price: '$1,250,000'
+    },
+    {
+      id: 2,
+      imageSrc: images.Prop2,
+      header: 'Mountain Retreat',
+      name: 'Alpine Chalet',
+      detail: 'Escape to the mountains in this cozy chalet surrounded by nature and tranquility.',
+      price: '$500,000',
+    },
+    {
+      id: 3,
+      imageSrc: images.Prop3,
+      header: 'Rustic Countryside Charm',
+      name: 'Meadowside Cottage',
+      detail: 'Charming cottage with a sprawling meadow view, perfect for peaceful country living.',
+      price: '$350,000',
+    },
+    {
+      id: 4,
+      imageSrc: images.Prop2,
+      header: 'Mountain Retreat',
+      name: 'Alpine Chalet',
+      detail: 'Escape to the mountains in this cozy chalet surrounded by nature and tranquility.',
+      price: '$500,000',
+    },
+  ]
 
 
 
   return (
     <>
-      <Box maxWidth={'100%'} sx={{ height: '100%', bgcolor: '#141414', placeItems: 'center', display: 'grid' }}>
+      <Box maxWidth={'100%'} sx={{ height: '100%', bgcolor: '#141414', placeItems: 'center', display: 'grid',rowGap:5 }}>
         <Box maxWidth={'100%'} className="heading-box" sx={{ position: 'relative', padding: { md: ' 100px 200px 0px 80px', sm: ' 50px 80px 65px 40px', xs: ' 30px 40px 30px 20px' }, placeContent: 'center', placeItems: 'center', alignItems: 'center', display: 'grid' }}>
           <Typography sx={{ width: '90%', fontFamily: 'Urbanist', fontSize: { xs: '28px', sm: '32px', md: '38px' }, fontWeight: '600', color: 'white' }}>
             Find Your Dream Property
@@ -187,7 +224,7 @@ const Properties = () => {
             <Button sx={{ width: 1 / 5, color: 'white', bgcolor: '#703BF7', padding: '14px 20px', display: { xs: 'flex', md: 'none' }, fontSize: { md: '10px', lg: '12px' } }}><SearchIcon /></Button>
           </Box>
           <Box maxWidth={'100%'} sx={{ width: '95%', padding: '10px', bgcolor: '#1A1A1A', borderRadius: '12px', display: 'grid' }}>
-            <Grid container sx={{ placeContent: 'space-between' }}>
+            <Grid container rowGap={2} sx={{ placeContent: 'space-between' }}>
               <Grid xs={12} sm={6} md={3} lg={2.2}>
                 <Autocomplete options={LocationList}
                   sx={{ bgcolor: '#141414', color: '#999999', borderRadius: '8px' }}
@@ -281,17 +318,69 @@ const Properties = () => {
             </Grid>
           </Box>
         </Box>
-        <Box maxWidth={'100%'} sx={{ width: '90%', display: 'grid',pt:{md:20,xs:5} }}>
-          <Box maxWidth={'100%'} sx={{width:{xs:'100%',sm:'80%'},display:'grid',gap:1}}>
-            <Stars/>
-            <Typography sx={{fontFamily:'Urbanist',color:'white',fontSize:{xs:'28px',sm:'32px',md:'36px'},fontWeight:'600'}}>
+        <Box maxWidth={'100%'} sx={{ width: '90%', display: 'grid', pt: { md: 20, xs: 5 } }}>
+          <Box maxWidth={'100%'} sx={{ width: { xs: '100%', sm: '80%' }, display: 'grid', gap: 1 }}>
+            <Stars />
+            <Typography sx={{ fontFamily: 'Urbanist', color: 'white', fontSize: { xs: '28px', sm: '32px', md: '36px' }, fontWeight: '600' }}>
               Discover a World of Possibilities
             </Typography>
-            <Typography sx={{fontFamily:'Urbanist',color:'#999',fontSize:{xs:'14px',md:'16px'},fontWeight:'500'}}>
+            <Typography sx={{ fontFamily: 'Urbanist', color: '#999', fontSize: { xs: '14px', md: '16px' }, fontWeight: '500' }}>
               Our portfolio of properties is as diverse as your dreams. Explore the following categories to find the perfect property that resonates with your vision of home.
             </Typography>
           </Box>
         </Box>
+        <Box maxWidth={'100%'} sx={{ width: '90%', display: 'grid' }}>
+          <Grid container spacing={'20px'} rowGap={10}>
+            {
+              propertyDetails.map(propertyDetail => (
+                <Grid xs={12} md={6} lg={4} >
+                  <Box maxWidth={'100%'} sx={{ height: '100%', padding: '30px', bgcolor: '#141414', borderRadius: '12px', display: 'grid', border: 1, color: '#999', '& img': { width: '100%' ,height:'250px'}, rowGap: '20px' }}>
+                    <img maxWidth={'100%'} src={propertyDetail.imageSrc} alt="Property" />
+                    <Box maxWidth={'100%'} sx={{ width: '100%', display: 'grid', gap: '20px' }}>
+                      <Typography maxWidth={'100%'} sx={{ alignItems: 'center', color: 'white', width: '80%', border: 1, borderColor: '#999', borderRadius: '28px', bgcolor: '#1A1A1A', display: 'flex', padding: '6px 12px', placeContent: 'center' }}>
+                        {propertyDetail.header}
+                      </Typography>
+                      <Box maxWidth={'100%'} sx={{ width: '100%', display: 'grid' }}>
+                        <Typography sx={{ color: 'white', fontFamily: 'Urbanist', fontSize: { xs: '18px', sm: '20px' }, fontWeight: 600 }}>
+                          {propertyDetail.name}
+                        </Typography>
+                        <Typography sx={{ color: '#999', fontFamily: 'Urbanist', fontSize: { xs: '14px', sm: '16px' }, fontWeight: 500 }}>
+                          {propertyDetail.detail}
+                        </Typography>
+                      </Box>
+                      <Box maxWidth={'100%'} sx={{ width: '100%', display: 'flex' }}>
+                        <Box maxWidth={'100%'} sx={{ width: 1 / 3 }}>
+                          <Typography sx={{ fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: '#999' }}>
+                            Price
+                          </Typography>
+                          <Typography sx={{ fontFamily: 'Urbanist', fontSize: '20px', fontWeight: 600, color: 'white' }}>
+                            {propertyDetail.price}
+                          </Typography>
+                        </Box>
+                        <Button sx={{ width: 2 / 3, bgcolor: '#703BF7', color: '#fff', padding: '10px 15px', fontWeight: 500, fontSize: '14px' }}>View Property Details</Button>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Grid>
+              ))
+            }
+          </Grid>
+        </Box>
+        <Box maxWidth={'100%'} sx={{ width: '90%', display: 'grid',pt:10 }}>
+          <Box maxWidth={'100%'} sx={{ width: { xs: '100%', sm: '80%' }, display: 'grid', gap: 1 }}>
+            <Stars />
+            <Typography sx={{ fontFamily: 'Urbanist', color: 'white', fontSize: { xs: '28px', sm: '32px', md: '36px' }, fontWeight: '600' }}>
+            Let's Make it Happen
+            </Typography>
+            <Typography sx={{ fontFamily: 'Urbanist', color: '#999', fontSize: { xs: '14px', md: '16px' }, fontWeight: '500' }}>
+            Ready to take the first step toward your dream property? Fill out the form below, and our real estate wizards will work their magic to find your perfect match. Don't wait; let's embark on this exciting journey together.
+            </Typography>
+          </Box>
+        </Box>
+        <Box maxWidth={'100%'} sx={{width:'90%',display:'grid',pt:5,placeContent:'center'}}>
+          <MessageForm/>
+        </Box>
+
       </Box>
     </>
   )

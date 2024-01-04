@@ -8,6 +8,9 @@ import Explore3 from './Explore3.png';
 import Explore4 from './Explore4.png';
 import Explore5 from './Explore5.png';
 import Explore6 from './Explore6.png';
-
-
-export const images = {Home,T1,HomeImage,Vila,Explore1,Explore2,Explore3,Explore4,Explore5,Explore6}
+import Prop1 from './Prop1.png';
+import Prop2 from './Prop2.png';
+import Prop3 from './Prop3.png';
+import Vector from './Vector.png'
+ 
+export const images = {Home,T1,Vector,HomeImage,Vila,Explore1,Explore2,Explore3,Explore4,Explore5,Explore6,Prop1,Prop2,Prop3}

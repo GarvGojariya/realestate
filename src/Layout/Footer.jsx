@@ -1,7 +1,10 @@
-import { Box, Button, Input, List, ListItemButton, ListItemText, ListSubheader, Typography} from '@mui/material';
+import { Box, Button, IconButton, Input, InputAdornment, List, ListItemButton, ListItemText, ListSubheader, Typography} from '@mui/material';
 import { React } from 'react'
 import { icons } from '../Assets/Icons/Index';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
+import EmailIcon from '@mui/icons-material/Email';
+import SendIcon from '../Assets/Icons/SendIcon';
+
 
 
 
@@ -11,7 +14,7 @@ const Footer = () => {
     return (
         <>
             <Box maxWidth='100%' sx={{ display: 'grid', placeContent: 'center', placeItems: 'center', justifyContent: 'center', bgcolor: '#141414' }}>
-                <Box sx={{ width: '90%', display: {xs:'grid',sm:'flex'}, height: 'auto', alignItems: 'center', justifyItems: 'center' }}>
+                <Box sx={{ width: '90%', display: {xs:'grid',sm:'flex'},backgroundImage:`url(${icons.FooterDesign})`, height: 'auto', alignItems: 'center', justifyItems: 'center' }}>
                     <Box sx={{ alignItems: 'stretch', display: 'grid', flexDirection: 'column', width: { xs: '90%', md: '75%' }, justifyContent: 'center', placeContent: 'center', alignContent: 'center', height: 'auto', paddingY: '60px' }}>
                         <Typography sx={{ color: 'white', fontFamily: 'Urbanist', display: 'flex', alignItems: 'center', fontStyle: 'normal', fontSize: { xs: "25px", md: '35px' }, alignSelf: 'stretch' }}>
                             Start Your Real Estate Journey Today
@@ -20,8 +23,8 @@ const Footer = () => {
                             Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.
                         </Typography>
                     </Box>
-                    <Box sx={{ width: '25%', placeContent: 'center', display: 'flex' }}>
-                        <Button className='btn-primary' variant='contained' size='small' sx={{ p:2,minHeight:'40px',bgcolor: '#703BF7', display: 'flex', placeSelf: 'center', borderRadius: '8px', fontSize: '12px' }}>
+                    <Box sx={{ width: {xs:'90%',md:'25%'}, placeContent: 'center', display: 'flex' }}>
+                        <Button className='btn-primary' variant='contained'  sx={{ p:2,minHeight:'40px',bgcolor: '#703BF7', display: 'flex', placeSelf: 'center', borderRadius: '8px', fontSize: '12px' }}>
                             Explore Properties
                         </Button>
                     </Box>
@@ -52,11 +55,18 @@ const Footer = () => {
                                 Estatein
                             </Typography>
                         </Box>
-                        <Input
-                            placeholder="Type in your email"
-                            className='email-input'
-                            sx={{ display: 'flex',width:'75%', color: 'white', borderColor: 'gray', borderWidth: '2px', borderRadius: '10px' }}
-                        />
+                        <Input className='input-field' placeholder='Enter Your Email'
+                        startAdornment={
+                            <InputAdornment><EmailIcon sx={{ fill: 'white', mr: '6px' }} /></InputAdornment>
+                        }
+                        endAdornment={
+                            <InputAdornment>
+                            <IconButton>
+                                <SendIcon/>
+                            </IconButton>
+                            </InputAdornment>
+                        }
+                        sx={{ color: 'white' }}></Input>
                     </Box>
                     <Grid container spacing={2} sx={{justifyItems:'center'}}>
                         <Grid xs={6} sm={4} md={2.25}>

@@ -1,15 +1,15 @@
 import { Box, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import { images } from '../Assets/Images/Index';
-import axios from 'axios';
+// import axios from 'axios';
 
 const ImagePagination = () => {
-    const [data, setData] = useState([])
-    useEffect( () => {
-        const responce =  axios.get('https://jsonplaceholder.typicode.com/photos');
-        setData(responce.data);
-        console.log(data)
-    })
+    // const [data, setData] = useState([])
+    // useEffect( () => {
+    //     const responce =  axios.get('https://jsonplaceholder.typicode.com/photos');
+    //     setData(responce.data);
+    //     console.log(data)
+    // })
 
     return (
         <>

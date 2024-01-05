@@ -6,6 +6,7 @@ import Properties from './Pages/Properties';
 import Services from './Pages/Services';
 import Home from './Pages/Home';
 import ContactUs from './Pages/ContactUs';
+import ImagePagination from './Components/ImagePagination';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/properties' element={<Layout><Properties /></Layout>} />
         <Route path='/services' element={<Layout><Services /></Layout>} />
         <Route path='/contactus' element={<Layout><ContactUs /></Layout>} />
+        <Route path='/paginate' element={<Layout><ImagePagination /></Layout>} />
       </Routes>
     </>
   );

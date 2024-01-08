@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Box, Grid, Typography, Button, IconButton, InputLabel, Input, TextField, Checkbox, Divider } from '@mui/material';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import { useState } from 'react';
@@ -56,6 +57,20 @@ const ImagePagination = () => {
     ]
     const [currentPage, setCurrentPage] = useState(1)
     const [imagePerPage, setImagePerPage] = useState(2)
+=======
+import { Box, Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react'
+import { images } from '../Assets/Images/Index';
+// import axios from 'axios';
+
+const ImagePagination = () => {
+    // const [data, setData] = useState([])
+    // useEffect( () => {
+    //     const responce =  axios.get('https://jsonplaceholder.typicode.com/photos');
+    //     setData(responce.data);
+    //     console.log(data)
+    // })
+>>>>>>> 87c1629d0b0db0a404213fd070f9a32733238467
 
     const lastImageIndex = currentPage * imagePerPage;
     const firstImageIndex = lastImageIndex - imagePerPage;

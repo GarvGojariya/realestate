@@ -135,7 +135,6 @@ const Properties = () => {
     }
   }
 
-
   return (
     <>
       <Box maxWidth={'100%'} sx={{ height: '100%', bgcolor: '#141414', placeItems: 'center', display: 'grid', rowGap: 5 }}>
@@ -400,7 +399,6 @@ const Properties = () => {
         <Box maxWidth={'100%'} sx={{ width: '90%', display: 'grid', pt: 5, placeContent: 'center' }}>
           <MessageForm />
         </Box>
-
       </Box>
     </>
   )

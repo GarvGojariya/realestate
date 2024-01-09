@@ -1,11 +1,10 @@
 import { Box, Button, Chip, Stack, Typography } from '@mui/material'
 import React from 'react'
-import { images } from '../Assets/Images/Index'
 import BedIcon from '@mui/icons-material/Bed';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 
-const PropertyCard = () => {
+const PropertyCard = ({data}) => {
     return (
         <>
             <Box sx={{ bgcolor: '#141414' }}>
@@ -15,13 +14,13 @@ const PropertyCard = () => {
                         width: '100%'
                     }
                 }}>
-                    <img src={images.Vila} alt="Property" />
+                    <img src={data.propimageurl} alt="Property" />
                     <Box sx={{ display: 'grid' }}>
                         <Typography sx={{ color: 'white' }}>
-                            Seaside Serenity Villa
+                            {data.propname}
                         </Typography>
                         <Typography sx={{ color: '#999' }}>
-                            A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More
+                            {data.propdescription}
                         </Typography>
                     </Box>
                     <Box sx={{width:'95%',placeItems:'center', placeSelf:'center',color: 'white', "& .icons": { color: 'white' }, display: 'flex', gap: 2, placeItems: 'center', placeSelf: 'center' }} >
@@ -35,7 +34,7 @@ const PropertyCard = () => {
                                 Price
                             </Typography>
                             <Typography sx={{fontFamily:'Urbanist',color:'white',fontSize:'20px'}}>
-                                $550,000
+                                {data.price}
                             </Typography>
                         </Box>
                         <Button sx={{bgcolor:'#703BF7',color:'white',width:2/3}} >View Property Details</Button>

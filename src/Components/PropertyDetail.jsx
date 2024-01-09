@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Box, Grid, Typography, Button, IconButton, InputLabel, Input, TextField, Checkbox, Divider } from '@mui/material';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import { useState } from 'react';
@@ -8,8 +7,18 @@ import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import Stars from '../Assets/Icons/Stars';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-const ImagePagination = () => {
+const PropertyDetail = () => {
+
+
+
+
     const propertyDetails = [
         {
             id: '1',
@@ -57,21 +66,6 @@ const ImagePagination = () => {
     ]
     const [currentPage, setCurrentPage] = useState(1)
     const [imagePerPage, setImagePerPage] = useState(2)
-=======
-import { Box, Typography } from '@mui/material';
-import React, { useEffect, useState } from 'react'
-import { images } from '../Assets/Images/Index';
-// import axios from 'axios';
-
-const ImagePagination = () => {
-    // const [data, setData] = useState([])
-    // useEffect( () => {
-    //     const responce =  axios.get('https://jsonplaceholder.typicode.com/photos');
-    //     setData(responce.data);
-    //     console.log(data)
-    // })
->>>>>>> 87c1629d0b0db0a404213fd070f9a32733238467
-
     const lastImageIndex = currentPage * imagePerPage;
     const firstImageIndex = lastImageIndex - imagePerPage;
     const currentImages = images.slice(firstImageIndex, lastImageIndex);
@@ -92,13 +86,7 @@ const ImagePagination = () => {
             setCurrentPage(currentPage - 1)
         }
     }
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    }
+
     return (
 
 
@@ -125,13 +113,38 @@ const ImagePagination = () => {
                     </Box>
                     <Box maxWidth={'100%'} sx={{ display: 'grid', width: '100%', bgcolor: '#1A1A1A', borderRadius: '12px', border: 1, borderColor: '#262626', }}>
                         <Box maxWidth={'100%'} sx={{ margin: { xs: '20px', sm: '30px', md: '40px' }, display: 'grid', rowGap: 5, placeContent: 'center' }}>
-                            <Box maxWidth={'100%'} sx={{ width: '100%', bgcolor: '#141414', border: 1, borderRadius: '12px', borderColor: '#666', overflowX: 'scroll', scrollbarColor: 'black' }}>
-                                <Box maxWidth={'100%'} sx={{ width: '100%', margin: '10px', display: 'flex', gap: '10px', '& img': { height: '100px', borderRadius: '10px' }, }}>
-                                    {
-                                        images.map((image) =>
-                                            <img src={image} alt="" />
-                                        )
-                                    }
+                            <Box maxWidth={'100%'} sx={{ padding: '10px', width: '100%', bgcolor: '#141414', border: 1, borderRadius: '12px', borderColor: '#666', overflow: 'hidden' }}>
+                                <Box maxWidth={'100%'} sx={{ width: '100%', display: 'flex', gap: '10px', '& img': { height: '100px', borderRadius: '10px', width: '100%' }, '& .Swiper': { width: '95%', padding: 3 } }}>
+                                    <Swiper
+                                        className='Swiper'
+                                        breakpoints={{
+                                            0: {
+                                                slidesPerView: 4
+                                            },
+                                            640: {
+                                                slidesPerView: 5
+                                            },
+                                            900: {
+                                                slidesPerView: 6
+                                            },
+                                            1200: {
+                                                slidesPerView: 7
+                                            }
+                                        }}
+                                        spaceBetween={10}
+                                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+
+                                        pagination={{ clickable: true }}
+                                        scrollbar={{ hide: true }}
+                                    >
+                                        {
+                                            images.map((image) =>
+                                                <SwiperSlide>
+                                                    <img src={image} alt="" />
+                                                </SwiperSlide>
+                                            )
+                                        }
+                                    </Swiper>
                                 </Box>
                             </Box>
                             <Box maxWidth={'100%'} sx={{ width: '100%', display: 'grid' }}>
@@ -341,7 +354,7 @@ const ImagePagination = () => {
                         </Box>
                         <Box maxWidth={'100%'} sx={{ width: '100%', display: 'grid', gap: 5 }}>
                             <Box maxWidth={'100%'} sx={{ width: '100%', border: 1, borderColor: '#262626', borderRadius: '10px' }}>
-                                <Box maxWidth={'100%'} sx={{ width: '100%', margin: '40px' }}>
+                                <Box maxWidth={'100%'} sx={{ width: '100%', margin: { xs: '20px', sm: '30px', md: '40px' } }}>
                                     <Box sx={{ width: '90%', display: 'flex', placeContent: 'space-between', placeItems: 'center' }}>
                                         <Typography sx={{ fontFamily: 'Urbanist', fontSize: { xs: '18px', sm: '20px' }, fontWeight: 600, color: 'white', }}>
                                             Additional Fees
@@ -350,27 +363,77 @@ const ImagePagination = () => {
                                             Learn More
                                         </Button>
                                     </Box>
-                                    <Divider border={1} sx={{ borderColor: '#666', my: '20px', width: '90%' }} variant='middle' />
-                                    <Box sx={{ width: '90%', display: 'flex', placeContent: 'space-between', placeItems: 'center' }}>
-                                        <Box maxWidth={'100%'} sx={{ display: 'grid', gap: 2 }}>
+                                    <Divider border={1} sx={{ borderColor: '#262626', my: '20px', width: '90%' }} variant='middle' />
+                                    <Box sx={{ width: '90%', display: { xs: 'grid', md: 'flex' }, placeItems: 'center', placeContent: 'center' }}>
+                                        <Box maxWidth={'100%'} sx={{ width: '100%', display: 'grid', gap: 2 }}>
                                             <Typography sx={{ fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: '#666', }}>
                                                 Property Transfer Tax
                                             </Typography>
-                                            <Box sx={{ display: 'flex',placeItems:'center',gap:2 }}>
+                                            <Box sx={{ display: 'flex', placeItems: 'center', gap: 2 }}>
                                                 <Typography sx={{ fontFamily: 'Urbanist', fontSize: { xs: '18px', sm: '20px' }, fontWeight: 500, color: 'white', }}>
                                                     $25,000
                                                 </Typography>
-                                                <Box sx={{bgcolor:'#1A1A1A',fontFamily:'Urbanist',border:1,borderColor:'#262626',borderRadius:'100px'}}>
-                                                    <Typography sx={{ margin:'6px 12px',fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: '#666', }}>
+                                                <Box sx={{ bgcolor: '#1A1A1A', fontFamily: 'Urbanist', border: 1, borderColor: '#262626', borderRadius: { xs: '8px', sm: '14px', md: '100px' } }}>
+                                                    <Typography sx={{ margin: '6px 12px', fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: '#666', }}>
                                                         Based on the sale price and local regulations
                                                     </Typography>
                                                 </Box>
                                             </Box>
                                         </Box>
-                                        <Divider/>
+                                        <Divider border={1} sx={{ borderColor: '#262626', my: '20px', width: '90%', display: { xs: 'grid', md: 'none' } }} variant='middle' />
+                                        <Divider sx={{ border: 1, borderColor: '#262626', marginX: '20px', display: { xs: 'none', md: 'grid' } }} orientation='veticle' flexItem />
+                                        <Box maxWidth={'100%'} sx={{ width: '100%', display: 'grid', gap: 2 }}>
+                                            <Typography sx={{ fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: '#666', }}>
+                                                Property Transfer Tax
+                                            </Typography>
+                                            <Box sx={{ display: 'flex', placeItems: 'center', gap: 2 }}>
+                                                <Typography sx={{ fontFamily: 'Urbanist', fontSize: { xs: '18px', sm: '20px' }, fontWeight: 500, color: 'white', }}>
+                                                    $25,000
+                                                </Typography>
+                                                <Box sx={{ bgcolor: '#1A1A1A', fontFamily: 'Urbanist', border: 1, borderColor: '#262626', borderRadius: { xs: '8px', sm: '14px', md: '100px' } }}>
+                                                    <Typography sx={{ margin: '6px 12px', fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: '#666', }}>
+                                                        Based on the sale price and local regulations
+                                                    </Typography>
+                                                </Box>
+                                            </Box>
+                                        </Box>
+                                    </Box>
+                                    <Divider border={1} sx={{ borderColor: '#262626', my: '20px', width: '90%' }} variant='middle' />
+                                    <Box sx={{ width: '90%', display: { xs: 'grid', md: 'flex' }, placeItems: 'center', placeContent: 'center' }}>
+                                        <Box maxWidth={'100%'} sx={{ width: '100%', display: 'grid', gap: 2 }}>
+                                            <Typography sx={{ fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: '#666', }}>
+                                                Property Transfer Tax
+                                            </Typography>
+                                            <Box sx={{ display: 'flex', placeItems: 'center', gap: 2 }}>
+                                                <Typography sx={{ fontFamily: 'Urbanist', fontSize: { xs: '18px', sm: '20px' }, fontWeight: 500, color: 'white', }}>
+                                                    $25,000
+                                                </Typography>
+                                                <Box sx={{ bgcolor: '#1A1A1A', fontFamily: 'Urbanist', border: 1, borderColor: '#262626', borderRadius: { xs: '8px', sm: '14px', md: '100px' } }}>
+                                                    <Typography sx={{ margin: '6px 12px', fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: '#666', }}>
+                                                        Based on the sale price and local regulations
+                                                    </Typography>
+                                                </Box>
+                                            </Box>
+                                        </Box>
+                                        <Divider border={1} sx={{ borderColor: '#262626', my: '20px', width: '90%', display: { xs: 'grid', md: 'none' } }} variant='middle' />
+                                        <Divider sx={{ border: 1, borderColor: '#262626', marginX: '20px', display: { xs: 'none', md: 'grid' } }} orientation='veticle' flexItem />
+                                        <Box maxWidth={'100%'} sx={{ width: '100%', display: 'grid', gap: 2 }}>
+                                            <Typography sx={{ fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: '#666', }}>
+                                                Property Transfer Tax
+                                            </Typography>
+                                            <Box sx={{ display: 'flex', placeItems: 'center', gap: 2 }}>
+                                                <Typography sx={{ fontFamily: 'Urbanist', fontSize: { xs: '18px', sm: '20px' }, fontWeight: 500, color: 'white', }}>
+                                                    $25,000
+                                                </Typography>
+                                                <Box sx={{ bgcolor: '#1A1A1A', fontFamily: 'Urbanist', border: 1, borderColor: '#262626', borderRadius: { xs: '8px', sm: '14px', md: '100px' } }}>
+                                                    <Typography sx={{ margin: '6px 12px', fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: '#666', }}>
+                                                        Based on the sale price and local regulations
+                                                    </Typography>
+                                                </Box>
+                                            </Box>
+                                        </Box>
                                     </Box>
                                 </Box>
-
                             </Box>
                         </Box>
                     </Box>
@@ -380,5 +443,5 @@ const ImagePagination = () => {
     )
 }
 
-export default ImagePagination
+export default PropertyDetail;
 

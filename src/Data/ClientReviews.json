@@ -1,0 +1,226 @@
+[
+    {
+        "rating": "4.5",
+        "review": "Exceptional Service!",
+        "reviewdescription": "Our experience with Estatein was outstanding. Their team's dedication and professionalism made finding our dream home a breeze. Highly recommended!",
+        "name": "Wade Warren",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "USA, California"
+    },
+    {
+        "rating": "3.8",
+        "review": "Great Experience!",
+        "reviewdescription": "We had a great experience with Estatein. The team was responsive and helped us find a suitable property. Would recommend their services!",
+        "name": "Megan Johnson",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Canada, Ontario"
+    },
+    {
+        "rating": "5.0",
+        "review": "Outstanding Service!",
+        "reviewdescription": "Estatein exceeded our expectations. The attention to detail and personalized service made the entire process smooth and enjoyable. Highly satisfied!",
+        "name": "Sophie Rodriguez",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Australia, Sydney"
+    },
+    {
+        "rating": "4.2",
+        "review": "Professional and Efficient!",
+        "reviewdescription": "We were impressed with the professionalism and efficiency of Estatein. The process was streamlined, and the team was always available for our queries.",
+        "name": "John Smith",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "UK, London"
+    },
+    {
+        "rating": "3.5",
+        "review": "Satisfactory Experience",
+        "reviewdescription": "Our experience with Estatein was satisfactory. The team could improve on communication, but overall, we found a decent property with their assistance.",
+        "name": "Emily Turner",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "USA, Texas"
+    },
+    {
+        "rating": "4.8",
+        "review": "Highly Recommend!",
+        "reviewdescription": "Choosing Estatein was the best decision. The team's knowledge and commitment to customer satisfaction are commendable. We highly recommend their services.",
+        "name": "Daniel Lee",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Canada, Vancouver"
+    },
+    {
+        "rating": "3.0",
+        "review": "Average Service",
+        "reviewdescription": "Our experience with Estatein was average. The process was standard, and we didn't encounter any major issues. However, improvements can be made in terms of personalization.",
+        "name": "Amanda Taylor",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Australia, Melbourne"
+    },
+    {
+        "rating": "4.5",
+        "review": "Smooth Transaction!",
+        "reviewdescription": "Estatein made the entire transaction smooth. From property selection to the final paperwork, their team was efficient and reliable. Highly satisfied!",
+        "name": "Robert Clark",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "USA, Florida"
+    },
+    {
+        "rating": "3.2",
+        "review": "Decent Experience",
+        "reviewdescription": "Our experience with Estatein was decent. The team was responsive, but there were minor delays in the process. Overall, a satisfactory experience.",
+        "name": "Olivia Turner",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "UK, Manchester"
+    },
+    {
+        "rating": "4.7",
+        "review": "Fantastic Service!",
+        "reviewdescription": "Choosing Estatein was a fantastic decision. The team went above and beyond to ensure we found the perfect property. Exceptional service!",
+        "name": "Ethan Miller",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Canada, Toronto"
+    },
+    {
+        "rating": "3.9",
+        "review": "Responsive Team",
+        "reviewdescription": "Estatein's team was highly responsive throughout the process. They addressed our concerns promptly, making the overall experience positive.",
+        "name": "Emma Harris",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Australia, Brisbane"
+    },
+    {
+        "rating": "4.0",
+        "review": "Good Service",
+        "reviewdescription": "We had a good experience with Estatein. The team was knowledgeable, and the entire process was smooth. Would consider their services again.",
+        "name": "Liam Davis",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "USA, New York"
+    },
+    {
+        "rating": "4.6",
+        "review": "Efficient and Friendly!",
+        "reviewdescription": "Estatein's team was both efficient and friendly. They guided us through the process, ensuring a positive and stress-free experience. Highly recommended!",
+        "name": "Ava Turner",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "UK, Birmingham"
+    },
+    {
+        "rating": "3.5",
+        "review": "Average Experience",
+        "reviewdescription": "Our experience with Estatein was average. The process was standard, and we faced a few hiccups. However, the team eventually resolved the issues.",
+        "name": "Noah Anderson",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Canada, Montreal"
+    },
+    {
+        "rating": "4.8",
+        "review": "Exceptional Service!",
+        "reviewdescription": "Estatein provided exceptional service. Their attention to detail, communication, and professionalism set them apart. Highly recommended!",
+        "name": "Isabella White",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Australia, Perth"
+    },
+    {
+        "rating": "3.0",
+        "review": "Below Expectations",
+        "reviewdescription": "Our experience with Estatein was below expectations. The process lacked personalization, and we faced delays in communication.",
+        "name": "Jackson Turner",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "USA, Illinois"
+    },
+    {
+        "rating": "4.5",
+        "review": "Highly Satisfied!",
+        "reviewdescription": "We are highly satisfied with Estatein's service. The team was dedicated, and they helped us find the perfect home. Excellent experience!",
+        "name": "Sophia Carter",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "UK, Edinburgh"
+    },
+    {
+        "rating": "3.8",
+        "review": "Positive Experience",
+        "reviewdescription": "Our experience with Estatein was positive. The team was responsive, and the overall process was smooth. Would recommend their services.",
+        "name": "Lucas Martin",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Canada, Calgary"
+    },
+    {
+        "rating": "4.9",
+        "review": "Top-Notch Service!",
+        "reviewdescription": "Estatein provided top-notch service. The team's expertise and dedication made the property search enjoyable and stress-free. Highly recommend!",
+        "name": "Chloe Adams",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Australia, Adelaide"
+    },
+    {
+        "rating": "3.2",
+        "review": "Room for Improvement",
+        "reviewdescription": "Our experience with Estatein had its challenges. There is room for improvement in terms of communication and personalization of services.",
+        "name": "Elijah Turner",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "USA, Arizona"
+    },
+    {
+        "rating": "4.7",
+        "review": "Exceptional Service!",
+        "reviewdescription": "Estatein provided exceptional service. The team was knowledgeable, and the entire process was smooth. Highly satisfied with our experience!",
+        "name": "Madison Wright",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "UK, Glasgow"
+    },
+    {
+        "rating": "3.5",
+        "review": "Average Experience",
+        "reviewdescription": "Our experience with Estatein was average. The process was standard, and we faced a few challenges. However, the team addressed our concerns.",
+        "name": "Logan Turner",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Canada, Vancouver"
+    },
+    {
+        "rating": "4.6",
+        "review": "Highly Recommend!",
+        "reviewdescription": "Choosing Estatein was a great decision. The team's expertise and commitment to customer satisfaction exceeded our expectations. Highly recommend!",
+        "name": "Hannah Taylor",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Australia, Sydney"
+    },
+    {
+        "rating": "3.9",
+        "review": "Positive Experience",
+        "reviewdescription": "Our experience with Estatein was positive. The team was responsive and guided us through the process. Overall, a satisfactory experience.",
+        "name": "Landon Turner",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "USA, Texas"
+    },
+    {
+        "rating": "4.0",
+        "review": "Good Service",
+        "reviewdescription": "Estatein provided good service. The team was knowledgeable, and the process was efficient. Would consider their services again in the future.",
+        "name": "Avery Turner",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "UK, London"
+    },
+    {
+        "rating": "4.8",
+        "review": "Exceptional Service!",
+        "reviewdescription": "We received exceptional service from Estatein. The team was dedicated, and the entire process was smooth. Highly satisfied with the outcome!",
+        "name": "Harper Turner",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Canada, Ontario"
+    },
+    {
+        "rating": "3.2",
+        "review": "Room for Improvement",
+        "reviewdescription": "Our experience with Estatein had its challenges. There is room for improvement in terms of communication and personalization of services.",
+        "name": "Ethan Turner",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "Australia, Melbourne"
+    },
+    {
+        "rating": "4.7",
+        "review": "Exceptional Service!",
+        "reviewdescription": "Estatein provided exceptional service. The team's dedication and professionalism made the property search enjoyable and stress-free. Highly recommend!",
+        "name": "Peyton Turner",
+        "profileimage": "https://i.imgur.com/QZmUuU2.jpg",
+        "location": "USA, California"
+    }
+]

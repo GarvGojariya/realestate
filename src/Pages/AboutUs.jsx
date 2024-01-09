@@ -1,12 +1,41 @@
-import { Box, Button, Card, CardActionArea, CardContent, CardMedia, IconButton, Typography } from '@mui/material';
+import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Divider, IconButton, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
-import React from 'react';
+import React, { useState } from 'react';
 import { images } from '../Assets/Images/Index';
 import { icons } from '../Assets/Icons/Index';
 import '../Styles/Index.css';
 import GridViewIcon from '@mui/icons-material/GridView';
+import clients from '../Data/ClientData.json'
+import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 
 const AboutUs = () => {
+
+  const [currentClientPage, setCurrentClientPage] = useState(1)
+  const [clientPerPage, setClientPerPage] = useState(2)
+  const lastClientIndex = currentClientPage * clientPerPage;
+  const firstClientIndex = lastClientIndex - clientPerPage;
+  const currentClients = clients.slice(firstClientIndex, lastClientIndex);
+
+  const displayNextClient = () => {
+    if (currentClientPage === (Math.ceil(clients.length / clientPerPage))) {
+      setCurrentClientPage(currentClientPage)
+    }
+    else {
+      setCurrentClientPage(currentClientPage + 1)
+    }
+  }
+  const displayPreviousClient = () => {
+    if (currentClientPage === 1) {
+      setCurrentClientPage(currentClientPage)
+    }
+    else {
+      setCurrentClientPage(currentClientPage - 1)
+    }
+  }
+
+
+
 
   return (
     <>
@@ -385,96 +414,70 @@ const AboutUs = () => {
               At Estatein, we have had the privilege of working with a diverse range of clients across various industries. Here are some of the clients we've had the pleasure of serving
             </Typography>
           </Box>
-          <Box sx={{display:{xs:'grid',md:'flex'},gap:4,width:'100%'}}>
-            <Box className='value-box' sx={{ width: { xs: '90%', md: '45%' }, p: '40px', display: 'grid', gap: 2 }}>
-              <Box sx={{ display: 'flex' }}>
-                <Box sx={{ width: 3 / 4 }}>
-                  <Typography sx={{ color: '#999', fontsize: '16px', fontWeight: 500, fontFamily: 'Urbanist' }}>
-                    Since 2019
-                  </Typography>
-                  <Typography sx={{ color: 'white', fontsize: '24px', fontWeight: 600, fontFamily: 'Urbanist' }}>
-                    ABC Corporation
-                  </Typography>
-                </Box>
-                <Button className='btn-visit' variant='contained' sx={{ bgcolor: '#1A1A1A', borderRadius: '10px', justifySelf: 'right' }}>Visit Website</Button>
-              </Box>
-              <Box sx={{ display: 'flex' }}>
-                <Box sx={{ width: '50%', display: 'grid', gap: 1 }}>
-                  <Box sx={{ color: '#999', fontsize: '18px', fontWeight: 500, fontFamily: 'Urbanist', display: 'flex', gap: '6px' }}>
-                    <GridViewIcon />
-                    <Typography>
-                      Domain
+          <Box sx={{ display: { xs: 'grid', md: 'flex' }, gap: 4, width: '100%' }}>
+            {
+              currentClients.map((client) =>
+                <Box className='value-box' sx={{ width: { xs: '90%', md: '45%' }, p: '40px', display: 'grid', gap: 2 }}>
+                  <Box sx={{ display: 'flex' }}>
+                    <Box sx={{ width: 3 / 4 }}>
+                      <Typography sx={{ color: '#999', fontsize: '16px', fontWeight: 500, fontFamily: 'Urbanist' }}>
+                        Since {client.year}
+                      </Typography>
+                      <Typography sx={{ color: 'white', fontsize: '24px', fontWeight: 600, fontFamily: 'Urbanist' }}>
+                        {client.name}
+                      </Typography>
+                    </Box>
+                    <Button className='btn-visit' variant='contained' sx={{ bgcolor: '#1A1A1A', borderRadius: '10px', justifySelf: 'right' }}>Visit Website</Button>
+                  </Box>
+                  <Box sx={{ display: 'flex' }}>
+                    <Box sx={{ width: '50%', display: 'grid', gap: 1 }}>
+                      <Box sx={{ color: '#999', fontsize: '18px', fontWeight: 500, fontFamily: 'Urbanist', display: 'flex', gap: '6px' }}>
+                        <GridViewIcon />
+                        <Typography>
+                          Domain
+                        </Typography>
+                      </Box>
+                      <Typography sx={{ color: 'white', fontsize: '20px', fontWeight: 500, fontFamily: 'Urbanist' }}>
+                        {client.domain}
+                      </Typography>
+                    </Box>
+                    <Box sx={{ width: '50%', display: 'grid', gap: 1 }}>
+                      <Box sx={{ color: '#999', fontsize: '18px', fontWeight: 500, fontFamily: 'Urbanist', display: 'flex', gap: '6px' }}>
+                        <img src={icons.CatagoryIcon} alt="" />
+                        <Typography>
+                          Category
+                        </Typography>
+                      </Box>
+                      <Typography sx={{ color: 'white', fontsize: '20px', fontWeight: 500, fontFamily: 'Urbanist' }}>
+                        {client.category}
+                      </Typography>
+                    </Box>
+                  </Box>
+                  <Box sx={{ border: 1, borderRadius: '12px', color: '#999', p: '30px', display: 'grid', gap: 2 }}>
+                    <Typography sx={{ fontsize: '18px', fontFamily: 'Urbanist', fontWeight: 500, color: '#999' }}>
+                      What They Said 🤗
+                    </Typography>
+                    <Typography sx={{ fontsize: '18px', fontFamily: 'Urbanist', fontWeight: 500, color: 'white' }}>
+                      {client.says}
                     </Typography>
                   </Box>
-                  <Typography sx={{ color: 'white', fontsize: '20px', fontWeight: 500, fontFamily: 'Urbanist' }}>
-                    Commercial Real Estate
-                  </Typography>
                 </Box>
-                <Box sx={{ width: '50%', display: 'grid', gap: 1 }}>
-                  <Box sx={{ color: '#999', fontsize: '18px', fontWeight: 500, fontFamily: 'Urbanist', display: 'flex', gap: '6px' }}>
-                    <img src={icons.CatagoryIcon} alt="" />
-                    <Typography>
-                      Category
-                    </Typography>
-                  </Box>
-                  <Typography sx={{ color: 'white', fontsize: '20px', fontWeight: 500, fontFamily: 'Urbanist' }}>
-                    Luxury Home Development
-                  </Typography>
-                </Box>
-              </Box>
-              <Box sx={{ border: 1, borderRadius: '12px', color: '#999', p: '30px', display: 'grid', gap: 2 }}>
-                <Typography sx={{ fontsize: '18px', fontFamily: 'Urbanist', fontWeight: 500, color: '#999' }}>
-                  What They Said 🤗
-                </Typography>
-                <Typography sx={{ fontsize: '18px', fontFamily: 'Urbanist', fontWeight: 500, color: 'white' }}>
-                  Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.
-                </Typography>
-              </Box>
+              )
+            }
+          </Box>
+          <Divider sx={{ border: 1, borderColor: '#262626', mt: 1 }} />
+          <Box maxWidth={'100%'} sx={{ width: '100%', display: 'flex', placeContent: 'space-between   ', alignItems: 'center' }}>
+            <Box maxWidth={'100%'} sx={{ display: 'flex', gap: 1, placeItems: 'center', alignItems: 'center' }}>
+              <Typography sx={{ color: 'white', fontFamily: 'Urbanist', fontSize: '20px', fontWeight: 500 }}>
+                {currentClientPage}
+              </Typography>
+              <Typography sx={{ color: '#666', fontFamily: 'Urbanist', fontSize: '20px', fontWeight: 500, wordSpacing: 5 }}>
+                of  {(Math.ceil(clients.length / clientPerPage))}
+              </Typography>
             </Box>
-            <Box className='value-box' sx={{ width: { xs: '90%', md: '45%' }, p: '40px', display: 'grid', gap: 2 }}>
-              <Box sx={{ display: 'flex' }}>
-                <Box sx={{ width: 3 / 4 }}>
-                  <Typography sx={{ color: '#999', fontsize: '16px', fontWeight: 500, fontFamily: 'Urbanist' }}>
-                    Since 2019
-                  </Typography>
-                  <Typography sx={{ color: 'white', fontsize: '24px', fontWeight: 600, fontFamily: 'Urbanist' }}>
-                    ABC Corporation
-                  </Typography>
-                </Box>
-                <Button className='btn-visit' variant='contained' sx={{ bgcolor: '#1A1A1A', borderRadius: '10px', justifySelf: 'right' }}>Visit Website</Button>
-              </Box>
-              <Box sx={{ display: 'flex' }}>
-                <Box sx={{ width: '50%', display: 'grid', gap: 1 }}>
-                  <Box sx={{ color: '#999', fontsize: '18px', fontWeight: 500, fontFamily: 'Urbanist', display: 'flex', gap: '6px' }}>
-                    <GridViewIcon />
-                    <Typography>
-                      Domain
-                    </Typography>
-                  </Box>
-                  <Typography sx={{ color: 'white', fontsize: '20px', fontWeight: 500, fontFamily: 'Urbanist' }}>
-                    Commercial Real Estate
-                  </Typography>
-                </Box>
-                <Box sx={{ width: '50%', display: 'grid', gap: 1 }}>
-                  <Box sx={{ color: '#999', fontsize: '18px', fontWeight: 500, fontFamily: 'Urbanist', display: 'flex', gap: '6px' }}>
-                    <img src={icons.CatagoryIcon} alt="" />
-                    <Typography>
-                      Category
-                    </Typography>
-                  </Box>
-                  <Typography sx={{ color: 'white', fontsize: '20px', fontWeight: 500, fontFamily: 'Urbanist' }}>
-                    Luxury Home Development
-                  </Typography>
-                </Box>
-              </Box>
-              <Box sx={{ border: 1, borderRadius: '12px', color: '#999', p: '30px', display: 'grid', gap: 2 }}>
-                <Typography sx={{ fontsize: '18px', fontFamily: 'Urbanist', fontWeight: 500, color: '#999' }}>
-                  What They Said 🤗
-                </Typography>
-                <Typography sx={{ fontsize: '18px', fontFamily: 'Urbanist', fontWeight: 500, color: 'white' }}>
-                  Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.
-                </Typography>
-              </Box>
+            <Box sx={{ bgcolor: '#141414', display: 'flex', borderRadius: '100px' }}>
+              <IconButton sx={{ border: 1, borderColor: '#666', margin: '8px' }} onClick={displayPreviousClient}><ArrowBackOutlinedIcon sx={{ height: '24px', width: '24px', color: 'white', borderColor: '#666' }} /></IconButton>
+              <IconButton sx={{ border: 1, borderColor: '#666', margin: '8px' }} onClick={displayNextClient}><ArrowForwardOutlinedIcon sx={{ height: '24px', width: '24px', color: 'white', borderColor: '#666' }} /></IconButton>
             </Box>
           </Box>
         </Box>

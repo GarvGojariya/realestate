@@ -1,0 +1,202 @@
+[
+    {
+        "id": "1",
+        "propheader": "Coastal Escapes - Where Waves Beckon",
+        "propname": "Seaside Serenity Villa",
+        "propdescription": "Wake up to the soothing melody of waves. This beachfront villa offers... Read More",
+        "propprice": "$1,250,000",
+        "propimageurl": "https://s3-alpha-sig.figma.com/img/597f/545b/cb329f29999c8c335bec608731f34db8?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZnWN9OFk3olmZXU0V~hAxyoeRGrmv8Ewc0zAqsnANgpc6yapysWlX-uB1PLzqwwxGe2vOuaU84GCdzNcHqyWljGoM0yVcKPvUDAgnC3IUZ2~9ikTKOlo4RbCEiMtcE2PgnRDAMiX3QAm7MJwE58cKK9VirfGiio85bga1w0qjG1y9eNOmXRuvc-2Y8-t1bMged2rZkYsK3XGpcmqy04k9P-ilgY-~8oAYxrP-Me0aoQZKT-j1OR6flXUhuqnVBmHA1Keyyn48IMlG4z3CO738-8hY8lnQGG4lY928vdWuEP9R9zjuXnQaVSEa1mDxpiFKQ5Qjq3JqCOxQ0Ami6Rgkg__"
+    },
+    {
+        "id": "2",
+        "propheader": "Mountain Retreat - Tranquil Nature Getaway",
+        "propname": "Eagle's Nest Cabin",
+        "propdescription": "Escape to the mountains and experience the serenity of nature in this cozy cabin...",
+        "propprice": "$800,000",
+        "propimageurl": "https://example.com/image2.jpg"
+    },
+    {
+        "id": "3",
+        "propheader": "Urban Oasis - Luxury Apartment Living",
+        "propname": "Metropolitan Heights Penthouse",
+        "propdescription": "Indulge in the ultimate urban living experience with breathtaking city views...",
+        "propprice": "$2,500,000",
+        "propimageurl": "https://example.com/image3.jpg"
+    },
+    {
+        "id": "4",
+        "propheader": "Historic Charm - Timeless Elegance",
+        "propname": "Victorian Manor Estate",
+        "propdescription": "Step back in time with this meticulously restored Victorian manor...",
+        "propprice": "$1,800,000",
+        "propimageurl": "https://example.com/image4.jpg"
+    },
+    {
+        "id": "5",
+        "propheader": "Ski Resort Paradise - Winter Wonderland",
+        "propname": "Alpine Chalet Retreat",
+        "propdescription": "Experience the thrill of the slopes and the coziness of a mountain chalet...",
+        "propprice": "$1,350,000",
+        "propimageurl": "https://example.com/image5.jpg"
+    },
+    {
+        "id": "6",
+        "propheader": "Desert Oasis - Modern Luxury in the Sands",
+        "propname": "Sandscape Villa",
+        "propdescription": "Escape to the tranquility of the desert in this modern and luxurious villa...",
+        "propprice": "$1,100,000",
+        "propimageurl": "https://example.com/image6.jpg"
+    },
+    {
+        "id": "7",
+        "propheader": "Rustic Charm - Country Cottage Retreat",
+        "propname": "Meadowview Cottage",
+        "propdescription": "Embrace the rustic charm of country living in this cozy cottage...",
+        "propprice": "$650,000",
+        "propimageurl": "https://example.com/image7.jpg"
+    },
+    {
+        "id": "8",
+        "propheader": "Tropical Paradise - Island Getaway",
+        "propname": "Palm Cove Bungalow",
+        "propdescription": "Relax and unwind in this tropical paradise bungalow just steps from the beach...",
+        "propprice": "$1,500,000",
+        "propimageurl": "https://example.com/image8.jpg"
+    },
+    {
+        "id": "9",
+        "propheader": "Modern Elegance - City Skyline Views",
+        "propname": "Skyline Heights Condo",
+        "propdescription": "Live in style with stunning views of the city skyline in this modern condo...",
+        "propprice": "$1,750,000",
+        "propimageurl": "https://example.com/image9.jpg"
+    },
+    {
+        "id": "10",
+        "propheader": "Golf Course Living - Luxury Greens",
+        "propname": "Fairway Manor Estate",
+        "propdescription": "Enjoy the tranquility of golf course living in this luxurious estate...",
+        "propprice": "$2,200,000",
+        "propimageurl": "https://example.com/image10.jpg"
+    },
+    {
+        "id": "11",
+        "propheader": "Lakeside Retreat - Serene Waterfront Living",
+        "propname": "Lakeview Haven Cottage",
+        "propdescription": "Escape to the peace and tranquility of lakeside living in this charming cottage...",
+        "propprice": "$900,000",
+        "propimageurl": "https://example.com/image11.jpg"
+    },
+    {
+        "id": "12",
+        "propheader": "Contemporary Urban Living - City Center Condo",
+        "propname": "Downtown Elegance Residence",
+        "propdescription": "Experience the pulse of the city in this contemporary urban residence...",
+        "propprice": "$1,600,000",
+        "propimageurl": "https://example.com/image12.jpg"
+    },
+    {
+        "id": "13",
+        "propheader": "Serenity in the Woods - Forest Retreat",
+        "propname": "Woodland Escape Cabin",
+        "propdescription": "Find peace and solitude in the heart of the forest in this charming cabin...",
+        "propprice": "$750,000",
+        "propimageurl": "https://example.com/image13.jpg"
+    },
+    {
+        "id": "14",
+        "propheader": "Luxury Riverside Living - Waterfront Mansion",
+        "propname": "Riverside Majesty Mansion",
+        "propdescription": "Live in grandeur with panoramic views of the river in this waterfront mansion...",
+        "propprice": "$3,000,000",
+        "propimageurl": "https://example.com/image14.jpg"
+    },
+    {
+        "id": "15",
+        "propheader": "Countryside Vineyard Estate - Wine Lover's Dream",
+        "propname": "Vineyard Haven Estate",
+        "propdescription": "Indulge in the beauty of the countryside with your own private vineyard estate...",
+        "propprice": "$2,800,000",
+        "propimageurl": "https://example.com/image15.jpg"
+    },
+    {
+        "id": "16",
+        "propheader": "Rooftop Retreat - Cityscape Views",
+        "propname": "Skylounge Penthouse",
+        "propdescription": "Elevate your living experience with breathtaking cityscape views in this penthouse...",
+        "propprice": "$2,100,000",
+        "propimageurl": "https://example.com/image16.jpg"
+    },
+    {
+        "id": "17",
+        "propheader": "Secluded Island Getaway - Exclusive Privacy",
+        "propname": "Island Paradise Villa",
+        "propdescription": "Escape to your own private island retreat with exclusive privacy and luxury...",
+        "propprice": "$4,000,000",
+        "propimageurl": "https://example.com/image17.jpg"
+    },
+    {
+        "id": "18",
+        "propheader": "Historic Elegance - Stately Mansion",
+        "propname": "Heritage Manor Mansion",
+        "propdescription": "Step into the past with the historic elegance of this stately mansion...",
+        "propprice": "$3,500,000",
+        "propimageurl": "https://example.com/image18.jpg"
+    },
+    {
+        "id": "19",
+        "propheader": "Beachfront Bliss - Tropical Paradise",
+        "propname": "Palm Beach Retreat",
+        "propdescription": "Experience beachfront bliss in this tropical paradise retreat...",
+        "propprice": "$1,950,000",
+        "propimageurl": "https://example.com/image19.jpg"
+    },
+    {
+        "id": "20",
+        "propheader": "Equestrian Estate - Horse Lover's Haven",
+        "propname": "Majestic Meadows Ranch",
+        "propdescription": "Live the equestrian lifestyle in this horse lover's haven with majestic meadows...",
+        "propprice": "$2,300,000",
+        "propimageurl": "https://example.com/image20.jpg"
+    },
+    {
+        "id": "21",
+        "propheader": "Modern Beach House - Oceanfront Living",
+        "propname": "Sunset Shores Residence",
+        "propdescription": "Enjoy modern beachfront living with stunning ocean views in this stylish residence...",
+        "propprice": "$1,380,000",
+        "propimageurl": "https://example.com/image21.jpg"
+    },
+    {
+        "id": "22",
+        "propheader": "Ski Chalet Charm - Winter Retreat",
+        "propname": "Snowy Peaks Chalet",
+        "propdescription": "Escape to the snowy peaks and cozy charm of this winter retreat ski chalet...",
+        "propprice": "$1,100,000",
+        "propimageurl": "https://example.com/image22.jpg"
+    },
+    {
+        "id": "23",
+        "propheader": "Cliffside Haven - Panoramic Views",
+        "propname": "Clifftop Vista Mansion",
+        "propdescription": "Live on the edge with panoramic views in this clifftop haven mansion...",
+        "propprice": "$2,600,000",
+        "propimageurl": "https://example.com/image23.jpg"
+    },
+    {
+        "id": "24",
+        "propheader": "Riverside Retreat - Tranquil Waterside Living",
+        "propname": "Riverbend Serenity Cottage",
+        "propdescription": "Experience the tranquility of riverside living in this serene waterside cottage...",
+        "propprice": "$950,000",
+        "propimageurl": "https://example.com/image24.jpg"
+    },
+    {
+        "id": "25",
+        "propheader": "City Skyline Penthouse - Luxury in the Clouds",
+        "propname": "Skyrise Elegance Penthouse",
+        "propdescription": "Reach new heights of luxury living with breathtaking city skyline views...",
+        "propprice": "$2,900,000",
+        "propimageurl": "https://example.com/image25.jpg"
+    }
+]

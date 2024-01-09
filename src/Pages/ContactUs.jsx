@@ -91,7 +91,7 @@ const ContactUs = () => {
           <Box sx={{ maxWidth: '90%' }}>
             <Grid container gap={1}>
               <Grid xs={12} md={5.5}>
-                <Box sx={{ display: 'grid', rowGap: 2 }} className='office-box'>
+                <Box sx={{ display: 'grid', rowGap: 2,height:'100%' }} className='office-box'>
                   <Box sx={{ width: '100%', height: '100%' }}>
                     <Typography sx={{ fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: 'white' }}>
                       Main Headquarters
@@ -112,7 +112,7 @@ const ContactUs = () => {
                 </Box>
               </Grid>
               <Grid xs={12} md={5.5}>
-                <Box sx={{ display: 'grid' ,rowGap:2}} className='office-box'>
+                <Box sx={{ display: 'grid' ,rowGap:2,height:'100%'}} className='office-box'>
                   <Box>
                     <Typography sx={{ fontFamily: 'Urbanist', fontSize: '14px', fontWeight: 500, color: 'white' }}>
                       Regional Offices

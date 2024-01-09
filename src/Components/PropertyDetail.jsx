@@ -12,7 +12,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css/effect-cube';
+import { Navigation, Pagination, Scrollbar, A11y,EffectCube } from 'swiper/modules';
+import shadows from '@mui/material/styles/shadows';
 
 const PropertyDetail = () => {
 
@@ -152,7 +154,7 @@ const PropertyDetail = () => {
                                     {
                                         currentImages.map((currentImage) =>
                                             <Grid xs={6} >
-                                                <Box maxWidth={'100%'} sx={{ widht: '100%', '& img': { width: '98%', borderRadius: '12px' }, placeContent: 'center', display: 'flex' }}>
+                                                <Box className='trans' maxWidth={'100%'} sx={{ widht: '100%', '& img': { width: '98%', borderRadius: '12px', }, placeContent: 'center', display: 'flex',}}>
                                                     <img src={currentImage} maxWidth={'100%'} alt="" />
                                                 </Box>
                                             </Grid>

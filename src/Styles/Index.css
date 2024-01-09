@@ -194,3 +194,8 @@
     box-shadow: inset 0 0 6px rgba(255, 0, 0, 0.3);
 }
 
+.trans{
+    transition-duration: 0ms;
+    transform: translate3d(0px, 0px, 0px);
+    transition-delay: 0ms;
+}

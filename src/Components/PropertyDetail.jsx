@@ -135,9 +135,8 @@ const PropertyDetail = () => {
                                         }}
                                         spaceBetween={10}
                                         modules={[Navigation, Pagination, Scrollbar, A11y]}
-
                                         pagination={{ clickable: true }}
-                                        scrollbar={{ hide: true }}
+                                        scrollbar={{hide:'true'}}
                                     >
                                         {
                                             images.map((image) =>

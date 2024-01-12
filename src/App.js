@@ -8,6 +8,7 @@ import Home from './Pages/Home';
 import ContactUs from './Pages/ContactUs';
 import PropertyDetail from './Components/PropertyDetail';
 import Reviews from './Pages/Reviews';
+import TranslatedPage from './Pages/TranslatedPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/contactus' element={<Layout><ContactUs /></Layout>} />
         <Route path='/prop-detail' element={<Layout><PropertyDetail /></Layout>} />
         <Route path='/review-page' element={<Layout><Reviews /></Layout>} />
+        <Route path='/translate-page' element={<Layout><TranslatedPage /></Layout>} />
 
       </Routes>
     </>
